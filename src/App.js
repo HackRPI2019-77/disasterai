@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import Home from './Components/Home/Home'
+import Home from './Components/Home/Home';
+import Welcome from './Components/Welcome/Welcome';
+//import Test from './Test/';
 
 export default class App extends React.Component{
   constructor(props){
@@ -8,12 +10,12 @@ export default class App extends React.Component{
     
   }
   render(){
-    const homePageComponent = () => <Home/>;
+    const welcomePageComponent = () => <Welcome/>;
     return (
       <div className="App">
         <Router>
           <div>
-            <Route exact path='/' render = {homePageComponent}></Route>
+            <Route exact path='/' render = {welcomePageComponent}></Route>
           </div>
         </Router>
       </div>
