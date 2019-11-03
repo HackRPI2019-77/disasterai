@@ -40,19 +40,19 @@ class Map extends Component {
         }
     }
 
-    // onMapClick({x, y, lat, lng, event}) {
-    //     if (!this.state.heatmapVisible) {
-    //       return
-    //     }
+    onMapClick({x, y, lat, lng, event}) {
+        if (!this.state.heatmapVisible) {
+          return
+        }
         
-    //       this.setState({
-    //           heatmapPoints: [ ...this.state.heatmapPoints, {lat, lng}]
-    //       })
-    //     if (this._googleMap !== undefined) {      
-    //       const point = new google.maps.LatLng(lat, lng)
-    //       this._googleMap.heatmap.data.push(point)
-    //     }
-    // }
+          this.setState({
+              heatmapPoints: [ ...this.state.heatmapPoints, {lat, lng}]
+          })
+        if (this._googleMap !== undefined) {      
+          const point = new google.maps.LatLng(lat, lng)
+          this._googleMap.heatmap.data.push(point)
+        }
+    }
 
     toggleHeatMap() {    
         this.setState({

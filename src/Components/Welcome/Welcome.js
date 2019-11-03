@@ -126,8 +126,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <img color="inherit"src ={logo}/>
-        Your Website
-      {/* </img></Link>{' '} */}
+        DisasterAI {" "}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
@@ -178,20 +177,23 @@ class Welcome extends React.Component{
               <Grid item xs={false} sm={4} md={7} className={classes.image} />
               <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
                 <div className={classes.paper}>
-                  <Typography component="h1" variant="h5">
-                    DisasterAI
-                  </Typography>
                   <form className={classes.form} noValidate>
-                    <Button
+                    {/* <Button
                       type="submit"
                       fullWidth
                       variant="contained"
                       color="primary"
                       className={classes.submit}
-                      href="/Home"
                     >
-                      Get Started
-                    </Button>
+                      Get Started */}
+                      <Grid container  justify="center">
+                            <Grid item>
+                                <Link href="/home" variant="body1">
+                                    {"Get Started"}
+                                </Link>
+                            </Grid>
+                      </Grid>
+                    {/* </Button> */}
                     <Box mt={5}>
                       <Copyright />
                     </Box>
